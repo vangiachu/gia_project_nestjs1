@@ -4,14 +4,12 @@ const config: PostgresConnectionOptions = {
   type: 'postgres',
   host: 'localhost',
   port: 5432,
-  username: 'postgres',
+  username: 'gia_project_nestjs1',
   password: '123456',
-  database: 'gia_project_nestjs',
-  entities: ['dist/**/*.entity{.ts,.js}'],
+  database: 'gia_project_nestjs1',
+  entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: false,
-  migrations: ['dist/migrations/*{.ts,.js}'],
+  migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
 };
-
-console.log(config)
 
 export default config;
